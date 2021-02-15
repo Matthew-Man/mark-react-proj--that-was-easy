@@ -5,7 +5,7 @@ import './index.css';
 
 
 const createButton = (option: string) => (
-  <button className={option} onClick={() => window.alert("that was " + option)}>{option}</button>
+  <button className={option.replace(/\s/g, "")} onClick={() => window.alert("that was " + option)}>{option}</button>
 )
 
 

@@ -10,7 +10,7 @@ const createButton = (option: string) => (
 
 
 function buttonBase() {
-  const buttonOptions = ["ease", "ok", "difficult", "very difficult"]
+  const buttonOptions = ["easy", "ok", "difficult", "very difficult"]
   return (
     buttonOptions.map(createButton)
   )

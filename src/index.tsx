@@ -5,24 +5,18 @@ import './index.css';
 
 
 const createButton = (option: string) => (
-  <button onClick={() => window.alert("that was " + option)}>{option}</button>
+  <button className={option} onClick={() => window.alert("that was " + option)}>{option}</button>
 )
 
 
-function buttonBase() {
+function ButtonBase() {
   const buttonOptions = ["easy", "ok", "difficult", "very difficult"]
   return (
-    buttonOptions.map(createButton)
-  )
-}
-
-function CompileButtons() {
-  return (
-    <div>
-      {buttonBase()}
+    <div className="button-container">
+      {buttonOptions.map(createButton)}
     </div>
   )
 }
 
 
-ReactDOM.render(<CompileButtons />, document.getElementById("button-base"))
+ReactDOM.render(<ButtonBase />, document.getElementById("button-base"))
